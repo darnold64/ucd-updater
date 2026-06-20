@@ -1,12 +1,24 @@
 <!doctype html>
 <html>
-  <body>
-    <h1>UCD Firmware Updater</h1>
+<head>
+  <title>Ultimate Computer Deck Firmware Updater</title>
+</head>
+<body>
+  <h1>Universal Card Detector</h1>
+  <h2>Firmware Updater</h2>
 
-    <script type="module"
-      src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module">
-    </script>
+  <p>
+    Connect your UCD to your computer using a USB cable.
+  </p>
 
-    <esp-web-install-button manifest="manifest.json?v=2"></esp-web-install-button>
-  </body>
+  <p>
+    Click Connect and select the device's COM port.
+  </p>
+
+  <script type="module"
+    src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module">
+  </script>
+
+  <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
+</body>
 </html>
