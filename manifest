@@ -1,0 +1,15 @@
+{
+  "name": "UCD ESP32-C3 Firmware",
+  "version": "1.0.0",
+  "builds": [
+    {
+      "chipFamily": "ESP32-C3",
+      "parts": [
+        {
+          "path": "ucd-firmware.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}
