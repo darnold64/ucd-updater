@@ -1,24 +1,135 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ultimate Computer Deck Firmware Updater</title>
-</head>
-<body>
-  <h1>Ultimate Computer Deck</h1>
-  <h2>Firmware Updater</h2>
 
-  <p>
-    Connect your UCD to your computer using a USB cable.
-  </p>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0d0d0f;
+      color: #f5f5f5;
+    }
 
-  <p>
-    Click Connect and select the device's COM port.
-  </p>
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.6);
+    }
+
+    h1 {
+      font-size: 46px;
+      margin: 0 0 10px;
+      letter-spacing: .5px;
+    }
+
+    h2 {
+      color: #36ff65;
+      font-weight: 600;
+      margin-top: 0;
+    }
+
+    .card {
+      background: #18181c;
+      border: 1px solid #2a2a31;
+      border-radius: 18px;
+      padding: 28px;
+      margin-top: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    .steps {
+      line-height: 1.7;
+      color: #d7d7d7;
+    }
+
+    .warning {
+      color: #ffcc66;
+      font-size: 14px;
+      margin-top: 18px;
+    }
+
+    esp-web-install-button {
+      display: block;
+      margin-top: 28px;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #888;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+    }
+  </style>
 
   <script type="module"
     src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module">
   </script>
+</head>
 
-  <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <h1>Ultimate Computer Deck</h1>
+        <h2>Firmware Updater</h2>
+
+        <p>
+          Use this page to update your Ultimate Computer Deck firmware directly from your browser.
+        </p>
+
+        <div class="card">
+          <strong>Update Instructions</strong>
+
+          <ol class="steps">
+            <li>Connect the Ultimate Computer Deck to your computer using USB.</li>
+            <li>Use Chrome or Microsoft Edge.</li>
+            <li>Click the install button below.</li>
+            <li>Select the correct ESP32-C3 serial port.</li>
+            <li>Wait for the update to complete before unplugging.</li>
+          </ol>
+
+          <esp-web-install-button manifest="manifest.json?v=2"></esp-web-install-button>
+
+          <p class="warning">
+            Do not disconnect the device while the firmware update is running.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <img src="assets/ucd-box.png" alt="Ultimate Computer Deck" />
+      </div>
+    </section>
+
+    <footer>
+      Ultimate Computer Deck · TRI-DELT MAGIC · Firmware Version 1.9
+    </footer>
+  </main>
 </body>
 </html>
