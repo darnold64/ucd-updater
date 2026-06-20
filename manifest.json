@@ -1,12 +1,12 @@
 {
-  "name": "UCD ESP32-C3 Firmware",
-  "version": "1.0.0",
+  "name": "Universal Card Detector",
+  "version": "1.9",
   "builds": [
     {
       "chipFamily": "ESP32-C3",
       "parts": [
         {
-          "path": "ucd-firmware.bin",
+          "path": "UCD_Rcvr_ESP32C3_6X10Matrix_v1_9.ino._flashed.bin",
           "offset": 0
         }
       ]
