@@ -6,7 +6,7 @@
       "chipFamily": "ESP32-C3",
       "parts": [
         {
-          "path": "UCD_Rcvr_ESP32C3_6X10Matrix_v1_9.ino_flashed.bin",
+          "path": "firmware/1.9/UCD_Rcvr_ESP32C3_6X10Matrix_v1_9.ino.merged.bin",
           "offset": 0
         }
       ]
